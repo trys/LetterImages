@@ -1,0 +1,95 @@
+html {
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: monospace;
+    line-height: 1;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background: #000;
+}
+
+canvas {
+    opacity: 0;
+    visibility: hidden;
+}
+
+canvas,
+output {
+    width: 100vmin;
+    height: 100vmin;
+    position: absolute;
+    margin: -50vmin 0 0 -50vmin;
+    top: 50%;
+    left: 50%;
+    word-break: break-word;
+    font-size: 1vmin;
+    opacity: 0;
+    transition: 1s opacity;
+}
+
+output.in {
+    opacity: 1;
+}
+
+output span {
+    height: 1em;
+    width: 1em;
+    display: inline-block;
+}
+
+.loading,
+.error {
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+    font-size: 1rem;
+    left: 50%;
+    top: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+}
+
+@media screen and (min-width: 350px) {
+    nav * + * {
+        margin-left: 5px;
+    }
+}
+
+.credit {
+    float: right;
+}
+
+label {
+    cursor: pointer;
+}
+
+input {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
